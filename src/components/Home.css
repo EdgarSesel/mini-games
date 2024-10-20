@@ -1,0 +1,46 @@
+.home {
+  text-align: center;
+  color: #ff7518;
+  font-family: 'Creepster', cursive;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased gap for better spacing */
+  margin-top: 20px;
+}
+
+.game-link {
+  text-decoration: none; /* Ensure no underline */
+  color: #ff7518;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.game-link:hover {
+  transform: scale(1.1);
+  
+}
+
+.game-link:hover .game-name {
+  color: red;
+  font-family: 'Creepster', cursive;
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+.game-icon {
+  width: 200px; /* Increased size */
+  height: 200px; /* Ensuring perfect square */
+  object-fit: cover; /* Ensuring the image covers the entire area */
+  transition: transform 0.3s;
+}
+
+.game-name {
+  margin-top: 10px;
+  font-size: 24px; /* Increased font size */
+  transition: color 0.3s, font-family 0.3s;
+  text-decoration: none; /* Ensure no underline */
+}

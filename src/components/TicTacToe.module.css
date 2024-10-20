@@ -1,0 +1,64 @@
+.ticTacToe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  color: #ff7518;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border: 2px solid #ff7518;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square img {
+  width: 80%;
+  height: 80%;
+}
+
+.square:hover {
+  background-color: #444;
+}
+
+.winningSquare {
+  background-color: #ff7518;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff7518;
+}
+
+.homeButton, .restartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff7518;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover, .restartButton:hover {
+  background-color: #ff9a3d;
+}

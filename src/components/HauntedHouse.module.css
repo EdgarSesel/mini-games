@@ -1,0 +1,198 @@
+.hauntedHouse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #000; /* Dark background for Halloween theme */
+  color: #ff7518; /* Halloween orange color */
+  position: relative; /* For positioning the sound button */
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 48px; /* Increased font size */
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 20px;
+}
+
+.woopsTimer {
+  color: red;
+  font-family: 'Creepster', cursive;
+}
+
+.room {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.doors {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px; /* Add gap between doors and question */
+}
+
+.doorImage {
+  width: 100px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.doorImage:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.answerInput {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ff7518;
+  border-radius: 5px;
+  background-color: #333;
+  color: #ff7518;
+}
+
+.submitButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff7518;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #ff9a3d;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.inventory {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.inventory h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.inventory ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.inventory li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.jumpscare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.jumpscareImage {
+  width: 100px;
+  height: 100px;
+  animation: jumpscareAnimation 0.5s forwards;
+}
+
+.woops {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: red;
+  font-family: 'Creepster', cursive;
+  z-index: 1001;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.soundButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Increased font size for speaker icon */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.homeButton, .restartButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff7518;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.homeButton:hover, .restartButton:hover {
+  background-color: #ff9a3d;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@keyframes jumpscareAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(10);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
+.correctAnswer {
+  color: green;
+  font-size: 1.5em;
+  margin-top: 10px;
+}

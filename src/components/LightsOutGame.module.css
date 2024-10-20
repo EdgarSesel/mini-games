@@ -1,0 +1,123 @@
+.lightsOutGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #000; /* Dark background for Halloween theme */
+  color: #ff7518; /* Halloween orange color */
+}
+
+.title {
+  font-family: 'Creepster', cursive;
+  font-size: 48px; /* Increased font size */
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 20px;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  gap: 40px; /* Add space between game and rules */
+}
+
+.gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensure 5 equal columns */
+  gap: 15px; /* Add gap between squares */
+  margin-top: 20px;
+  max-width: 600px; /* Control maximum width */
+}
+
+.square {
+  width: 60px; /* Ensure square takes full width of grid cell */
+  padding-top: 60px; /* Maintain aspect ratio */
+  position: relative; /* For absolutely positioned content */
+  background-color: #333;
+  border: 3px solid #ff7518; /* Thicker border */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.square img {
+  width: 70%; /* Increased size */
+  height: 70%; /* Increased size */
+  position: absolute; /* Ensure image is centered */
+  top: 15%;
+  left: 15%;
+}
+
+.square:hover {
+  background-color: #444; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.lit {
+  background: radial-gradient(circle, rgba(255,117,24,1) 0%, rgba(255,165,0,1) 50%, rgba(255,69,0,1) 100%);
+}
+
+.winMessage {
+  margin-top: 20px;
+  font-size: 28px; /* Increased font size */
+  color: #ff7518;
+  font-family: 'Creepster', cursive;
+}
+
+.restartButton {
+  margin-top: 20px;
+  padding: 15px 30px; /* Increased padding */
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  background-color: #ff7518;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.restartButton:hover {
+  background-color: #ff9a3d;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.gameRules {
+  max-width: 300px;
+  color: #ff7518;
+  font-family: 'Creepster', cursive;
+  text-align: left;
+}
+
+.gameRules h3 {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 10px;
+}
+
+.gameRules p {
+  font-size: 18px; /* Increased font size */
+  margin-bottom: 10px;
+}
+
+.gameRules ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.gameRules li {
+  font-size: 18px; /* Increased font size */
+  margin-bottom: 5px;
+}
